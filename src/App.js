@@ -65,9 +65,9 @@ function App() {
     <>
       <Router>
         <Switch>
-          <PrivateRouter path="/" component={HomeScreen} exact />
+          <Route path="/" component={HomeScreen} exact />
 
-          <PrivateRouter path="/products" component={ProductScreen} exact />
+          <Route path="/products" component={ProductScreen} exact />
           <PrivateRouter path="/product/add" component={AddProduct} />
           <PrivateRouter path="/product/excel" component={ProductExcelCSV} exact />
           <PrivateRouter path="/product/:id" component={ProductEditScreen} exact />
