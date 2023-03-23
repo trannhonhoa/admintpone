@@ -31,6 +31,7 @@ import { PRODUCT_LIST_RESET } from "../Constants/ProductConstants";
 //   autoClose: 2000,
 // };
 // ADMIN LOGIN
+import api from '../../api.js';
 export const login = (email, password) => async (dispatch) => {
   try {
     dispatch({ type: USER_LOGIN_REQUEST });
@@ -41,8 +42,8 @@ export const login = (email, password) => async (dispatch) => {
       },
     };
 
-    const { data } = await axios.post(
-      `http://dev2.sunny.net.vn:24253/api/users/login`,
+    const { data } = await api.post(
+      `/api/users/login`,
       { email, password },
       config
     );
