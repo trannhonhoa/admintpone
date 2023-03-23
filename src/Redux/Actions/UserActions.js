@@ -42,7 +42,7 @@ export const login = (email, password) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      `/api/users/login`,
+      `http://dev2.sunny.net.vn:24253/api/users/login`,
       { email, password },
       config
     );
